@@ -1,0 +1,89 @@
+.inner {
+  padding: 0 15px;
+  @include mq('pc') {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subttl {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.72;
+  @include mq('pc') {
+    font-size: 3.8rem;
+  }
+}
+
+
+
+.cv_btn {
+  position: fixed;
+  width: 100%;
+  height: 58px;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  @include mq('tab') {
+    width: 180px;
+    height: 180px;
+    bottom: auto;
+    left: auto;
+    top: 130px;
+    right: 40px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5DAC81;
+    width: 100%;
+    height: 58px;
+    font-size: 2.6rem;
+    color: #fff;
+    border: solid 4px #CCCCCC;
+    position: relative;
+    @include mq('tab') {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      font-size: 2.7rem;
+      flex-direction: column;
+      border: solid 5px #fff;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%) rotate(-45deg);
+      width: 12px;
+      height: 12px;
+      border-right: solid 2px #fff;
+      border-bottom: solid 2px #fff;
+      @include mq('tab') {
+        top: auto;
+        right: 35%;
+        bottom: 5px;
+        width: 24px;
+        height: 24px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        border-right: solid 3px #fff;
+        border-bottom: solid 3px #fff;
+      }
+    }
+    > span {
+      font-size: 1.4rem;
+      margin-left: 5px;
+      @include mq('tab') {
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-top: 7px;
+      }
+    }
+  }
+}

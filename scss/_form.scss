@@ -1,0 +1,589 @@
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+
+* form
+
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#contact {
+
+}
+
+#contact > div {
+	max-width: 1040px;
+    margin: 0 auto;
+}
+
+.form_style {
+  width:100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin:0 auto;
+}
+
+.form_style dl {
+	margin-top:15px;
+}
+
+.form_style dl dt {
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 4px 15px;
+	background:#EEEEEE;
+	color:#333;
+	box-sizing: border-box;
+	display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.form_style dl dd + dt {
+    margin-top: 10px;	
+}
+
+.form_style dl dt.required:after{
+    content: "必須";
+    display: inline-block;
+    font-size: 1.2rem;
+	font-weight:400;
+    color: #FFF;
+    background: #E10000;
+    padding: 3px 4px;
+    line-height: 1;
+    box-sizing: border-box;
+    vertical-align: text-top;
+    margin-left: 1em;
+}
+
+.form_style dl dd {
+    font-size: 1.6rem;
+	padding: 12px 15px;
+	background: #e7eaf0;
+	box-sizing: border-box;
+}
+
+.form_style dl dd:last-child{
+    margin-bottom: 0;
+}
+
+.form_style.confirm dl dt {
+  margin-bottom: 5px;
+}
+
+.form_style.confirm dl dd {
+  padding-bottom:20px;
+  border-bottom:#534741 1px dashed;
+}
+
+.form_style dl dd label + input + label input {
+  margin-left: 15px;
+  display:inline-block;
+  margin-top: 15px;
+}
+
+.form_style dl + a {
+    display:block;
+    text-decoration:underline;
+    margin:30px auto 0;
+	color:#111;
+}
+
+.form_style dl + a + label {
+    display:inline-block;
+    margin-top:15px;
+	font-size:1.3rem;
+}
+
+.form_style dl + a + label span {
+    text-decoration:underline;
+}
+
+
+/*-- ▼input_style --*/
+
+.form_style input[type="submit"],
+.form_style input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/*.form_style input:not[type="radio"],*/
+.form_style input[type="text"],
+.form_style input[type="email"],
+.form_style textarea {
+   /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Then Style */
+    border-radius:0;
+    border:none;
+    padding:0;
+    background: transparent;
+    outline: none;
+}
+
+.form_style input[type="text"],
+.form_style input[type="email"],
+.form_style input[type="tel"],
+.form_style textarea {
+	width:100%;
+	border: 1px #CBCBCB solid;
+	padding: 10px 15px;
+	font-size:1.6rem;
+	box-sizing:border-box;
+ 	background:#fff;
+	transition: all 300ms 0s ease;
+	border-radius: 4px;  
+}
+
+.form_style input[type="text"]:hover,
+.form_style input[type="email"]:hover,
+.form_style input[type="tel"]:hover,
+.form_style textarea:hover,
+.form_style input[type="text"]:focus,
+.form_style input[type="email"]:focus,
+.form_style input[type="tel"]:focus,
+.form_style textarea:focus {
+	border: 1px #16336D solid;
+ 	background:#fff;
+
+}
+
+.form_style textarea {
+  font-size:1.6rem;
+  height:15em;
+　line-height:1.8 !important;
+}
+
+.form_style input[type="submit"],
+.form_style input[type="button"] {
+  width: 100%;
+  max-width: 315px;
+  font-size:1.6rem;
+  margin:20px auto 0;
+  display:block;
+  font-weight:700;
+  border-radius:25px;
+  padding:10px 0;
+  box-sizing:border-box;
+}
+
+.form_style input[type="button"] {
+  margin:40px auto 0;
+}
+
+.form_style input[type="submit"] + input[type="button"] {
+  margin:15px auto 0;
+}
+
+
+/* セレクトボックスのスタイル
+--------------------------*/
+
+.sel_box > div {
+  position:relative;
+}
+.sel_box > div:after{
+  display: block;
+  content: "▼";
+  color:#666;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto 20px auto auto;
+  width: 1em;
+  height: 12px;
+  line-height: 1;
+  font-size: 1.2rem;
+}
+
+select {
+	width:100%;
+	background: #FFF;
+	border: 1px #cccccc solid;
+	padding:0.8em 1em;
+	font-size:1.6rem;
+	color:#666;
+	box-sizing:border-box;
+	border-radius: 6px;        /* CSS3草案 */  
+	-webkit-border-radius: 6px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 6px;   /* Firefox用 */  
+  -webkit-appearance: none;
+}
+select option {
+	width:100%;
+	background: #FFF;
+	border: 1px #cccccc solid;
+	padding:1em;
+	color:#333;
+	font-size:1.6rem;
+	box-sizing:border-box;
+	border-radius: 6px;        /* CSS3草案 */  
+	-webkit-border-radius: 6px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 6px;   /* Firefox用 */  
+}
+
+
+/* checkboxのスタイル
+--------------------------*/
+
+.chk_input{
+  display: none;
+}
+.chk_style{
+  padding-left: 20px;
+  position: relative;
+  margin-right: 20px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.chk_style::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
+
+}
+
+.chk_input + .chk_style{
+  font-size:1.6rem;
+}
+
+.chk_input:checked + .chk_style::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #16336D;
+    border-radius: 3px;
+    background: #16336D;
+}
+
+.chk_input:checked + .chk_style::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 3px;
+    height: 10px;
+    transform: rotate(40deg);
+    border-bottom: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+
+.form_style #agree {
+	text-align: center;
+	margin-top:20px;
+	display: block;
+	font-size:1.2rem;
+}
+
+.form_style #agree a {
+	text-decoration: underline;
+}
+
+.form_style .confirmation {
+  font-size:1.4rem;
+  margin-bottom:25px;
+}
+
+.form_style .err {
+  color:#FF0000;
+}
+
+#privacy {
+	margin-top: 20px;
+}
+
+#privacy strong {
+	margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+#privacy > div {
+    padding: 10px;
+	margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    height: 200px;
+    overflow: auto;
+}
+
+#privacy > div h3 {
+	font-size: 1.3rem;
+}
+
+#privacy > div p {
+	font-size: 1.3rem;
+}
+
+
+
+/* 横向き用
+---------------------------------------------------------------------*/
+
+@media (orientation: landscape) {
+}
+
+
+
+
+/* 320px以下用
+---------------------------------------------------------------------*/
+
+@media print,screen and (max-width: 320px) {
+
+
+}
+
+
+
+
+/* TAB用768px～（TAB）
+---------------------------------------------------------------------*/
+
+@media print,screen and (min-width: 768px) {
+
+.form_style {
+}
+
+.form_style dl {
+    display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.form_style dl dt {
+    width: 38%;
+	font-size: 1.6rem;
+	align-items: center;
+}
+
+.form_style dl dt.required:after {
+    font-size: 1.4rem;
+	padding: 8px 8px;
+}
+
+.form_style dl dd {
+    width: calc(62% - 10px);
+	margin-left:10px;
+}
+
+.form_style dl dd + dt + dd {
+    margin-top: 10px;
+}
+
+.form_style .completion {
+	text-align: center;
+}
+
+#privacy > div {
+    height: 300px;
+}
+
+
+
+}
+
+
+
+
+/* PC用1024px～（PC）
+---------------------------------------------------------------------*/
+
+@media print,screen and (min-width: 1024px){
+
+#contact {
+    padding: 70px 15px 80px;
+}
+
+.form_style {
+  margin-left:auto;
+  margin-right:auto;
+  padding: 0;
+}
+
+.form_style dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.form_style dl dt {
+  width:calc(34% - 10px);
+  max-width:330px;
+  font-size:2rem;
+    padding: 20px;
+	display: flex;
+    align-items: center;
+}
+
+.form_style dl dd + dt + dd {
+    margin-top: 10px;
+}
+
+.form_style dl dt.required:after{
+    content: "必須";
+    font-size: 1.4rem;
+    margin-left:0;
+    padding: 7px 6px;
+	line-height:1;
+	margin:auto 0 auto auto;
+}
+
+.form_style dl dd{
+    width: 66%;
+    font-size: 1.6rem;
+	padding: 20px;
+	margin-top:0px;
+}
+
+.form_style.confirm dl dt {
+  padding-bottom:20px;
+  margin-bottom: 20px;
+  border-bottom: #534741 1px dashed;
+}
+
+.form_style.confirm dl dd {
+  padding-bottom:20px;
+  margin-bottom: 20px;
+  border-bottom:#534741 1px dashed;
+}
+
+.form_style dl dd:last-child {
+    margin-bottom: 0;
+}	
+
+.form_style dl + a {
+    width:280px;
+    margin: 40px auto 0;
+    text-align: center;
+	font-size: 1.6rem;
+}
+
+.form_style dl + a + label {
+    margin: 30px auto 0;
+    text-align: center;
+    display: block;
+    width: 45%;
+	font-size:1.6rem;
+}
+
+
+/*-- input_style --*/
+
+.form_style input[type="text"],
+.form_style input[type="email"],
+.form_style input[type="tel"],
+.form_style textarea {
+	padding: 13px 20px;
+    font-size: 1.6rem;
+}
+
+.form_style textarea {
+  height:300px;
+  line-height:2;
+}
+
+.form_style input[type="submit"],
+.form_style input[type="button"] {
+  max-width: 426px;
+  margin:40px auto 0;
+  font-size:2rem;
+  padding:30px 0;
+  line-height:1;
+  border-radius: 50px;
+  transition:0.5s;
+  letter-spacing: 1px;
+  background-size: 14px auto;
+}
+
+.form_style input[type="submit"]:hover,
+.form_style input[type="button"]:hover {
+  opacity:0.5;
+}
+
+
+.form_style #agree {
+    margin-top: 30px;
+}
+
+.form_style .confirmation {
+  font-size:1.8rem;
+  margin-bottom:40px;
+    line-height: 2;
+}
+
+.form_style #agree {
+	margin-top:40px;
+	font-size:1.4rem;
+}
+
+#privacy {
+	margin-top:40px;
+}
+	
+#privacy strong {
+	margin-top: 20px;
+    font-size: 1.6rem;
+}
+
+#privacy > div {
+	margin-top: 10px;
+	padding:15px;
+}
+
+#privacy > div h3 {
+	font-size: 1.6rem;
+}
+
+#privacy > div p {
+	font-size: 1.6rem;
+}
+
+
+}
+
+
+
+/* PC用1280x～（PC）
+---------------------------------------------------------------------*/
+
+@media print,screen and (min-width: 1280px){
+
+.form_style dl dt {
+    width: 330px;
+    max-width: none;
+}
+
+.form_style dl dd {
+    width: 700px;
+    max-width: none;
+}
+
+
+
+}
